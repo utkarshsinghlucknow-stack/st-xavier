@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <title>St. Xavier's ERP - Start</title>
+
+  <!-- Tailwind (Play CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- React 18 + Babel -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.production.min.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: #e5e7eb;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="root">Loading...</div>
+
+  <script type="text/babel">
+    const App = () => {
+      const [tab, setTab] = React.useState("dashboard");
+
+      const Dashboard = () => (
+        <div className="glass p-6 rounded-2xl max-w-3xl mx-auto mt-6">
+          <h2 className="text-xl font-bold mb-2">Dashboard</h2>
+          <p className="text-slate-600 text-sm">
+            Ye sirf starting demo screen hai. Isme baad me admission, students,
+            fees sab add karenge.
+          </p>
+        </div>
+      );
+
+      const AdmissionForm = () => (
+        <div className="glass p-6 rounded-2xl max-w-3xl mx-auto mt-6">
+          <h2 className="text-xl font-bold mb-4">Admission Form (Demo)</h2>
+          <p className="text-slate-600 text-sm">
+            Abhi yahan form ka design aayega. Pehle app ko stable run kara lete
+            hain.
+          </p>
+        </div>
+      );
+
+      return (
+        <div className="min-h-screen bg-slate-100">
+          <header className="bg-indigo-600 text-white py-4 shadow">
+            <div className="max-w-5xl mx-auto flex items-center justify-between px-4">
+              <h1 className="font-bold text-lg">St. Xavier&apos;s ERP</h1>
+              <nav className="flex gap-3 text-sm">
+                <button
+                  onClick={() => setTab("dashboard")}
+                  className={
+                    "px-3 py-1 rounded-full " +
+                    (tab === "dashboard" ? "bg-white text-indigo-600" : "bg-indigo-500")
+                  }
+                >
+                  Dashboard
+                </button>
+                <button
+                  onClick={() => setTab("admission")}
+                  className={
+                    "px-3 py-1 rounded-full " +
+                    (tab === "admission" ? "bg-white text-indigo-600" : "bg-indigo-500")
+                  }
+                >
+                  Admission
+                </button>
+              </nav>
+            </div>
+          </header>
+
+          <main className="max-w-5xl mx-auto px-4 pb-10">
+            {tab === "dashboard" && <Dashboard />}
+            {tab === "admission" && <AdmissionForm />}
+          </main>
+        </div>
+      );
+    };
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
