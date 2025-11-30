@@ -22,7 +22,7 @@
   ></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- Firebase CDN (abhi sirf connected, use nahi kar rahe) -->
+  <!-- Firebase CDN -->
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
 
@@ -44,7 +44,7 @@
   <div id="root">Loading...</div>
 
   <script type="text/babel">
-    // Firebase config (use future me karenge)
+    // Firebase config
     const firebaseConfig = {
       apiKey: "AIzaSyAcCDfj5UFkeE5m_Fozui9ozYq7uMcbvAo",
       authDomain: "stxavier0.firebaseapp.com",
@@ -54,6 +54,7 @@
       appId: "1:1056358174808:web:26cb4ff114ac3dd1f9fa2d",
     };
 
+    // Initialize Firebase (compat)
     const app = firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
 
@@ -210,31 +211,3 @@
             prev.map((s) =>
               s.id === id
                 ? { ...s, dueAmount: (s.dueAmount || 0) - amt }
-                : s
-            )
-          );
-          setAmount("");
-        };
-
-        return (
-          <div className="glass p-6 rounded-2xl max-w-4xl mx-auto mt-6">
-            <h2 className="text-xl font-bold mb-4">Students (Local)</h2>
-            {students.length === 0 ? (
-              <p className="text-sm text-slate-500">
-                Abhi koi student add nahi hai.
-              </p>
-            ) : (
-              <div className="space-y-2 max-h-[60vh] overflow-auto">
-                {students.map((s) => (
-                  <div
-                    key={s.id}
-                    className="p-3 border rounded-xl space-y-2 bg-white"
-                  >
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="font-semibold">{s.name}</div>
-                        <div className="text-xs text-slate-500">
-                          {s.className} · Roll: {s.rollNo || "-"}
-                        </div>
-                      </div>
-                      <div className
