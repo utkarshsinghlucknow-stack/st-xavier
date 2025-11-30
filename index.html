@@ -43,7 +43,7 @@
 <body>
   <div id="root">Loading...</div>
 
-  <script type="text/babel">
+    <script type="text/babel">
     // Firebase config (connected, abhi Firestore use nahi kar rahe)
     const firebaseConfig = {
       apiKey: "AIzaSyAcCDfj5UFkeE5m_Fozui9ozYq7uMcbvAo",
@@ -209,4 +209,106 @@
           setStudents((prev) =>
             prev.map((s) =>
               s.id === id
-                ? { ...s, dueAmount
+                ? { ...s, dueAmount: (s.dueAmount || 0) - amt }
+                : s
+            )
+          );
+          setAmount("");
+        };
+
+        return (
+          <div className="glass p-6 rounded-2xl max-w-4xl mx-auto mt-6">
+            <h2 className="text-xl font-bold mb-4">Students (Local)</h2>
+            {students.length === 0 ? (
+              <p className="text-sm text-slate-500">
+                Abhi koi student add nahi hai.
+              </p>
+            ) : (
+              <div className="space-y-2 max-h-[60vh] overflow-auto">
+                {students.map((s) => (
+                  <div
+                    key={s.id}
+                    className="p-3 border rounded-xl space-y-2 bg-white"
+                  >
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <div className="font-semibold">{s.name}</div>
+                        <div className="text-xs text-slate-500">
+                          {s.className} · Roll: {s.rollNo || "-"}
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs text-slate-500">
+                          Monthly fee
+                        </div>
+                        <div className="font-bold text-indigo-600">
+                          ₹{s.monthlyFee || 0}
+                        </div>
+                        <div className="text-xs text-slate-500 mt-1">
+                          Due:{" "}
+                          <span
+                            className={
+                              (s.dueAmount || 0) > 0
+                                ? "text-red-600 font-semibold"
+                                : "text-green-600 font-semibold"
+                            }
+                          >
+                            ₹{s.dueAmount || 0}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2 items-center">
+                      <input
+                        type="number"
+                        min="0"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        placeholder="Amount"
+                        className="w-32 p-2 text-sm rounded-lg border border-slate-200"
+                      />
+                      <button
+                        onClick={() => collectFee(s.id)}
+                        className="px-3 py-2 text-sm rounded-lg bg-emerald-600 text-white font-semibold"
+                      >
+                        Collect (Local)
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      };
+
+      return (
+        <div className="min-h-screen bg-slate-100">
+          <header className="bg-indigo-600 text-white py-4 shadow">
+            <div className="max-w-5xl mx-auto flex items-center justify-between px-4">
+              <h1 className="font-bold text-lg">St. Xavier&apos;s ERP</h1>
+              <nav className="flex gap-3 text-sm">
+                <button
+                  onClick={() => setTab("dashboard")}
+                  className={
+                    "px-3 py-1 rounded-full " +
+                    (tab === "dashboard"
+                      ? "bg-white text-indigo-600"
+                      : "bg-indigo-500")
+                  }
+                >
+                  Dashboard
+                </button>
+                <button
+                  onClick={() => setTab("admission")}
+                  className={
+                    "px-3 py-1 rounded-full " +
+                    (tab === "admission"
+                      ? "bg-white text-indigo-600"
+                      : "bg-indigo-500")
+                  }
+                >
+                  Admission
+                </button>
+                <button
