@@ -22,7 +22,7 @@
   ></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- Firebase CDN (abhi sirf connected, use nahi kar rahe) -->
+  <!-- Firebase CDN (future use) -->
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
 
@@ -44,7 +44,7 @@
   <div id="root">Loading...</div>
 
   <script type="text/babel">
-    // Firebase config (use future me karenge)
+    // Firebase config (connected, but not used yet)
     const firebaseConfig = {
       apiKey: "AIzaSyAcCDfj5UFkeE5m_Fozui9ozYq7uMcbvAo",
       authDomain: "stxavier0.firebaseapp.com",
@@ -147,166 +147,4 @@
                 />
                 <input
                   name="motherName"
-                  placeholder="Mother's Name"
-                  className="p-3 rounded-xl border border-slate-200"
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  name="phone"
-                  placeholder="Mobile Number"
-                  className="p-3 rounded-xl border border-slate-200"
-                  required
-                />
-                <select
-                  name="className"
-                  className="p-3 rounded-xl border border-slate-200"
-                  required
-                >
-                  <option value="">Select Class</option>
-                  <option>NUR</option>
-                  <option>LKG</option>
-                  <option>UKG</option>
-                  <option>1st</option>
-                  <option>2nd</option>
-                  <option>3rd</option>
-                  <option>4th</option>
-                  <option>5th</option>
-                  <option>6th</option>
-                  <option>7th</option>
-                  <option>8th</option>
-                </select>
-              </div>
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  name="rollNo"
-                  placeholder="Roll No (optional)"
-                  className="p-3 rounded-xl border border-slate-200"
-                />
-                <input
-                  name="address"
-                  placeholder="Address"
-                  className="p-3 rounded-xl border border-slate-200"
-                />
-              </div>
-              <button className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold">
-                Save (Local)
-              </button>
-            </form>
-          </div>
-        );
-      };
-
-            const StudentsView = () => {
-        const [amount, setAmount] = React.useState("");
-
-        const collectFee = (id) => {
-          const amt = Number(amount || 0);
-          if (!amt) {
-            alert("Amount daalo");
-            return;
-          }
-          setStudents((prev) =>
-            prev.map((s) =>
-              s.id === id
-                ? { ...s, dueAmount: (s.dueAmount || 0) - amt }
-                : s
-            )
-          );
-          setAmount("");
-        };
-
-        return (
-          <div className="glass p-6 rounded-2xl max-w-4xl mx-auto mt-6">
-            <h2 className="text-xl font-bold mb-4">Students (Local)</h2>
-            {students.length === 0 ? (
-              <p className="text-sm text-slate-500">
-                Abhi koi student add nahi hai.
-              </p>
-            ) : (
-              <div className="space-y-2 max-h-[60vh] overflow-auto">
-                     const StudentsView = () => {
-        const [amount, setAmount] = React.useState("");
-
-        const collectFee = (id) => {
-          const amt = Number(amount || 0);
-          if (!amt) {
-            alert("Amount daalo");
-            return;
-          }
-          setStudents((prev) =>
-            prev.map((s) =>
-              s.id === id
-                ? { ...s, dueAmount: (s.dueAmount || 0) - amt }
-                : s
-            )
-          );
-          setAmount("");
-        };
-
-        return (
-          <div className="glass p-6 rounded-2xl max-w-4xl mx-auto mt-6">
-            <h2 className="text-xl font-bold mb-4">Students (Local)</h2>
-            {students.length === 0 ? (
-              <p className="text-sm text-slate-500">
-                Abhi koi student add nahi hai.
-              </p>
-            ) : (
-              <div className="space-y-2 max-h-[60vh] overflow-auto">
-                {students.map((s) => (
-                  <div
-                    key={s.id}
-                    className="p-3 border rounded-xl space-y-2 bg-white"
-                  >
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="font-semibold">{s.name}</div>
-                        <div className="text-xs text-slate-500">
-                          {s.className} · Roll: {s.rollNo || "-"}
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-xs text-slate-500">
-                          Monthly fee
-                        </div>
-                        <div className="font-bold text-indigo-600">
-                          ₹{s.monthlyFee || 0}
-                        </div>
-                        <div className="text-xs text-slate-500 mt-1">
-                          Due:{" "}
-                          <span
-                            className={
-                              (s.dueAmount || 0) > 0
-                                ? "text-red-600 font-semibold"
-                                : "text-green-600 font-semibold"
-                            }
-                          >
-                            ₹{s.dueAmount || 0}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-2 items-center">
-                      <input
-                        type="number"
-                        min="0"
-                        value={amount}
-                        onChange={(e) => setAmount(e.target.value)}
-                        placeholder="Amount"
-                        className="w-32 p-2 text-sm rounded-lg border border-slate-200"
-                      />
-                      <button
-                        onClick={() => collectFee(s.id)}
-                        className="px-3 py-2 text-sm rounded-lg bg-emerald-600 text-white font-semibold"
-                      >
-                        Collect (Local)
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        );
-      };
+                  placeholder="Mother's
