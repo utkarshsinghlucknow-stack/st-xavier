@@ -21,6 +21,9 @@
     src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
   ></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
 
   <style>
     body {
@@ -40,6 +43,20 @@
   <div id="root">Loading...</div>
 
    <script type="text/babel">
+         // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyAcCDfj5UFkeE5m_Fozui9ozYq7uMcbvAo",
+      authDomain: "stxavier0.firebaseapp.com",
+      projectId: "stxavier0",
+      storageBucket: "stxavier0.firebasestorage.app",
+      messagingSenderId: "1056358174808",
+      appId: "1:1056358174808:web:26cb4ff114ac3dd1f9fa2d",
+    };
+
+    // Initialize Firebase (compat)
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
     const CLASS_FEE = {
       NUR: 380,
       LKG: 400,
@@ -380,5 +397,6 @@
 
     ReactDOM.createRoot(document.getElementById("root")).render(<App />);
   </script>
+
 
 
