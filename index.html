@@ -3,294 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh Public School - Excellence in Education</title>
+    <title>St. Xavier's School - Raishree Chauraha</title>
     
-    <!-- Tailwind CSS for Professional Styling -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        .school-gradient {
+            background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%);
         }
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 30, 60, 0.7), rgba(0, 30, 60, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 50, 0.7), rgba(0, 0, 50, 0.7)), url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
         }
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .marquee-content {
-            display: inline-block;
-            animation: marquee 20s linear infinite;
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
         }
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Top Bar (Contact Info) -->
-    <div class="bg-blue-900 text-white py-2 text-sm hidden md:block">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div>
-                <i class="fas fa-phone-alt mr-2"></i> +91 98765 43210
-                <span class="mx-4">|</span>
-                <i class="fas fa-envelope mr-2"></i> info@adarshpublicschool.com
+    <!-- Top Bar -->
+    <div class="bg-yellow-500 text-blue-900 py-2 text-sm font-semibold">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span><i class="fas fa-phone-alt mr-2"></i> +91 95652 41505, 73553 45644</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fas fa-envelope mr-2"></i> stxaviersschool322@gmail.com</span>
             </div>
-            <div>
-                <a href="#" class="hover:text-yellow-400 mr-3"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-yellow-400 mr-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+            <div class="mt-2 md:mt-0 flex space-x-4">
+                <a href="https://www.instagram.com/st.xaviers_raishree?igsh=enZmcmg0ejV6bGhp" target="_blank" class="hover:text-white transition transform hover:scale-110">
+                    <i class="fab fa-instagram text-lg"></i> <span class="ml-1">Follow us</span>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo Area -->
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    AP
+            <!-- Logo Section -->
+            <div class="flex items-center gap-3">
+                <!-- Placeholder for Logo (using an icon as placeholder since we can't link local files directly easily) -->
+                <div class="w-14 h-14 relative flex items-center justify-center">
+                   <img src="https://via.placeholder.com/100x100/1e3a8a/ffffff?text=STX" alt="School Logo" class="rounded-full border-2 border-yellow-500 shadow-sm w-full h-full object-cover">
                 </div>
                 <div>
-                    <h1 class="text-xl md:text-2xl font-bold text-blue-900 leading-tight">Adarsh Public School</h1>
-                    <p class="text-xs text-gray-500 font-semibold tracking-wider">ESTD. 1995 | AFFILIATED TO CBSE</p>
+                    <h1 class="text-xl md:text-3xl font-bold text-blue-900 leading-none">St. Xavier's School</h1>
+                    <p class="text-xs md:text-sm text-gray-600 font-medium uppercase tracking-wider">Raishree Chauraha, Gauri Bazar, Deoria</p>
                 </div>
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 font-medium text-gray-700">
-                <a href="#" class="text-blue-900 hover:text-yellow-600">Home</a>
-                <a href="#about" class="hover:text-blue-900">About Us</a>
-                <a href="#academics" class="hover:text-blue-900">Academics</a>
-                <a href="#gallery" class="hover:text-blue-900">Gallery</a>
-                <a href="#contact" class="hover:text-blue-900">Contact</a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <button onclick="toggleMobileMenu()" class="md:hidden text-blue-900 text-2xl focus:outline-none">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-700">
+                <a href="#" class="text-blue-900 hover:text-yellow-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-900 transition">About Us</a>
+                <a href="#features" class="hover:text-blue-900 transition">Features</a>
+                <a href="#gallery" class="hover:text-blue-900 transition">Gallery</a>
+                <a href="#contact" class="px-5 py-2 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition shadow-md">Admissions</a>
+            </nav>
+
+            <!-- Mobile Menu Btn -->
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-blue-900 text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
-            
-            <!-- Admission Button (Desktop) -->
-            <a href="#contact" class="hidden md:block bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-lg">
-                Admission Open
-            </a>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex flex-col space-y-3 shadow-lg">
-            <a href="#" class="block text-gray-700 font-medium">Home</a>
-            <a href="#about" class="block text-gray-700 font-medium">About Us</a>
-            <a href="#academics" class="block text-gray-700 font-medium">Academics</a>
-            <a href="#gallery" class="block text-gray-700 font-medium">Gallery</a>
-            <a href="#contact" class="block text-blue-900 font-bold">Apply Now</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3 shadow-inner">
+            <a href="#" class="block text-blue-900 font-semibold">Home</a>
+            <a href="#about" class="block text-gray-700">About Us</a>
+            <a href="#features" class="block text-gray-700">Features</a>
+            <a href="#gallery" class="block text-gray-700">Gallery</a>
+            <a href="#contact" class="block text-yellow-600 font-bold">Contact Us</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- News Marquee (Notice Board) -->
-    <div class="bg-yellow-500 text-blue-900 py-2 font-semibold overflow-hidden flex items-center">
-        <span class="bg-blue-900 text-white px-3 py-1 ml-4 text-xs uppercase tracking-wide rounded absolute z-10">Latest News</span>
-        <div class="marquee-container w-full ml-24">
-            <div class="marquee-content">
-                Admission open for Session 2024-25 from Nursery to Class XI | Annual Sports Day scheduled for 15th December | Parent-Teacher Meeting on Saturday.
+    <!-- Scrolling Notice Board -->
+    <div class="bg-blue-900 text-white py-2 overflow-hidden flex items-center relative">
+        <div class="bg-yellow-500 text-blue-900 px-3 py-1 font-bold text-xs uppercase absolute z-10 left-0 h-full flex items-center shadow-md">
+            Notice Board
+        </div>
+        <div class="w-full whitespace-nowrap overflow-hidden ml-24">
+            <div class="animate-marquee inline-block pl-4">
+                <span class="mx-4">📢 Admission Open for Session 2025 - Nursery to Class 9th. Enroll Now!</span>
+                <span class="mx-4">🏆 Annual Sports 2024-25 Winners Announced.</span>
+                <span class="mx-4">📝 Final Exams schedule released. Contact office for details.</span>
             </div>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-bg h-[500px] flex items-center justify-center text-center text-white px-4">
-        <div>
-            <h2 class="text-yellow-400 font-bold text-lg md:text-xl mb-2 uppercase tracking-widest">Welcome to Adarsh Public School</h2>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Empowering Minds,<br>Shaping Futures.</h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200">
-                A place where education meets values. We provide world-class facilities to nurture the leaders of tomorrow.
+    <section class="hero-section h-[550px] flex items-center justify-center text-center text-white px-4 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block border-2 border-yellow-400 px-4 py-1 rounded-full text-yellow-400 text-sm font-bold mb-4 uppercase tracking-widest">
+                Nothing Beyond
+            </div>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 drop-shadow-lg">Shaping Bright Futures</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">
+                Strong Academic Foundation (CBSE) | Innovative STEM Programs
             </p>
-            <div class="space-x-4">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition inline-block">Enquire Now</a>
-                <a href="#about" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white px-8 py-3 rounded-full font-semibold text-lg transition inline-block">Learn More</a>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition transform hover:-translate-y-1 shadow-lg">
+                    Apply for Admission
+                </a>
+                <a href="tel:+919565241505" class="bg-transparent border-2 border-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition">
+                    Call Now
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Features Cards -->
-    <section class="py-16 -mt-16 relative z-10 px-4">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-white p-8 rounded-lg shadow-xl text-center hover-scale border-b-4 border-blue-900">
-                <div class="text-4xl text-yellow-500 mb-4"><i class="fas fa-book-reader"></i></div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Modern Curriculum</h3>
-                <p class="text-gray-600">CBSE affiliated curriculum designed to foster critical thinking and innovation.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-blue-900 p-8 rounded-lg shadow-xl text-center hover-scale border-b-4 border-yellow-500 text-white">
-                <div class="text-4xl text-yellow-400 mb-4"><i class="fas fa-futbol"></i></div>
-                <h3 class="text-xl font-bold mb-2">Sports & Activities</h3>
-                <p class="text-gray-300">Huge playground, indoor sports complex, and regular extra-curricular activities.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white p-8 rounded-lg shadow-xl text-center hover-scale border-b-4 border-blue-900">
-                <div class="text-4xl text-yellow-500 mb-4"><i class="fas fa-microscope"></i></div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Hi-Tech Labs</h3>
-                <p class="text-gray-600">Fully equipped Science, Computer, and Robotics labs for practical learning.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Principal's Message -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0 relative">
-                <div class="absolute top-4 -left-4 w-full h-full border-4 border-yellow-500 rounded-lg"></div>
-                <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Principal" class="relative rounded-lg shadow-lg w-full max-w-md mx-auto z-10">
-            </div>
-            <div class="md:w-1/2 md:pl-16">
-                <h4 class="text-blue-900 font-bold uppercase tracking-wide mb-2">Principal's Message</h4>
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Nurturing Potential,<br>Inspiring Excellence</h2>
-                <p class="text-gray-600 mb-4 leading-relaxed">
-                    "At Adarsh Public School, we believe that every child is unique. Our mission is to provide a safe and intellectually challenging environment that empowers students to become innovative thinkers and inspired learners."
-                </p>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    We focus not just on academic excellence but on holistic development. Join us in this journey of learning and growth.
-                </p>
-                <div class="flex items-center">
-                    <img src="https://ui-avatars.com/api/?name=Dr+Sharma&background=0D47A1&color=fff" class="w-12 h-12 rounded-full mr-4" alt="Sign">
-                    <div>
-                        <p class="font-bold text-gray-900">Dr. R.K. Sharma</p>
-                        <p class="text-sm text-gray-500">Principal, PhD (Education)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Gallery -->
-    <section id="gallery" class="py-16 bg-gray-100">
+    <!-- Why Choose Us (Features from Flyer) -->
+    <section id="features" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800">Life at Campus</h2>
-                <div class="w-20 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Why Choose St. Xavier's?</h2>
+                <div class="h-1 w-24 bg-yellow-500 mx-auto"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="overflow-hidden rounded-lg shadow-md h-64 group">
-                    <img src="https://images.unsplash.com/photo-1577896333242-3f8364638d6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Classroom" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-blue-50 p-8 rounded-xl border-b-4 border-blue-900 hover:shadow-xl transition duration-300 group">
+                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Academic Excellence</h3>
+                    <p class="text-gray-600 text-sm">Strong academic foundation based on CBSE curriculum with caring and qualified faculty.</p>
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64 group">
-                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Library" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+
+                <!-- Feature 2 -->
+                <div class="bg-yellow-50 p-8 rounded-xl border-b-4 border-yellow-500 hover:shadow-xl transition duration-300 group">
+                    <div class="w-16 h-16 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">STEM Programs</h3>
+                    <p class="text-gray-600 text-sm">Innovative STEM (Science, Technology, Engineering, Math) programs to spark curiosity.</p>
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64 group">
-                    <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sports" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+
+                <!-- Feature 3 -->
+                <div class="bg-blue-50 p-8 rounded-xl border-b-4 border-blue-900 hover:shadow-xl transition duration-300 group">
+                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Athletics</h3>
+                    <p class="text-gray-600 text-sm">Extensive athletics opportunities including Annual Sports meets to ensure physical fitness.</p>
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64 group">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lab" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+
+                <!-- Feature 4 -->
+                <div class="bg-yellow-50 p-8 rounded-xl border-b-4 border-yellow-500 hover:shadow-xl transition duration-300 group">
+                    <div class="w-16 h-16 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Holistic Growth</h3>
+                    <p class="text-gray-600 text-sm">A safe, supportive, and challenging environment for students to grow academically and personally.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Enquiry Form -->
-    <section id="contact" class="py-16 bg-blue-900 text-white relative">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <!-- Admission Banner -->
+    <section class="bg-blue-900 py-16 text-white relative overflow-hidden">
+        <!-- Decorative Circle -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-yellow-500 opacity-20"></div>
+        
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
+            <div class="mb-8 md:mb-0 md:w-2/3">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Admissions Open 2025</h2>
+                <p class="text-lg text-blue-100 mb-6">Registration is now open for the new academic year from <span class="text-yellow-400 font-bold">Nursery to Class 9th</span>.</p>
+                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm inline-block">
+                    <h4 class="font-bold text-yellow-400 mb-2">Requirements:</h4>
+                    <ul class="text-sm space-y-1">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> Photocopy of Family Card (Aadhar)</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> 2 Recent Passport Size Photos (3x4)</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> Final Diploma / Report Card</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:w-1/3 text-center">
+                <div class="bg-white text-blue-900 p-6 rounded-lg shadow-2xl transform rotate-2 hover:rotate-0 transition">
+                    <p class="text-sm uppercase font-bold tracking-wide text-gray-500 mb-2">For Enquiries</p>
+                    <p class="text-2xl font-bold mb-1">+91 95652 41505</p>
+                    <p class="text-lg font-semibold text-gray-700">73553 45644</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Life at Campus</h2>
+                    <p class="text-gray-600 mt-2">Glimpses of our activities and celebrations.</p>
+                </div>
+                <a href="https://www.instagram.com/st.xaviers_raishree" target="_blank" class="text-blue-900 font-semibold hover:text-yellow-600 mt-4 md:mt-0">
+                    View More on Instagram <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-96 md:h-[500px]">
+                <!-- Item 1 (Large) -->
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1576267423048-15c0040fec78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Annual Sports" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg">Annual Sports Day</h4>
+                            <p class="text-sm text-yellow-400">Celebrating athletic spirit</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cultural" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                         <span class="text-white font-bold">Annual Function</span>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Students" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-white font-bold">Classroom Activities</span>
+                   </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Rangoli" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-white font-bold">Cultural Events</span>
+                   </div>
+                </div>
+                 <!-- Item 5 -->
+                 <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1577896333242-3f8364638d6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Labs" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-white font-bold">STEM Labs</span>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-4 border-yellow-500">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <!-- Brand -->
             <div>
-                <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-                <p class="mb-8 text-gray-300">Have questions about admissions or facilities? Feel free to contact us or visit our campus.</p>
-                
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <i class="fas fa-map-marker-alt mt-1 text-yellow-500 w-8"></i>
-                        <p>123, Knowledge Park, Near City Center,<br>New Delhi, India - 110001</p>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-phone mt-1 text-yellow-500 w-8"></i>
-                        <p>+91 98765 43210</p>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope mt-1 text-yellow-500 w-8"></i>
-                        <p>admissions@adarshschool.com</p>
-                    </div>
+                <h3 class="text-2xl font-bold text-white mb-4">St. Xavier's School</h3>
+                <p class="mb-6 leading-relaxed">
+                    Dedicated to nurturing young minds with a strong foundation in values and academics. Join us for a bright future.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/st.xaviers_raishree" target="_blank" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="bg-white text-gray-800 p-8 rounded-lg shadow-2xl">
-                <h3 class="text-2xl font-bold mb-4 text-blue-900">Enquiry Form</h3>
-                <form onsubmit="handleForm(event)">
-                    <div class="mb-4">
-                        <label class="block text-sm font-semibold mb-2">Student Name</label>
-                        <input type="text" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-900" placeholder="Enter name" required>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-sm font-semibold mb-2">Class Applying For</label>
-                        <select class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-900">
-                            <option>Nursery</option>
-                            <option>Primary (1-5)</option>
-                            <option>Middle (6-8)</option>
-                            <option>High School (9-12)</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-sm font-semibold mb-2">Parent's Phone</label>
-                        <input type="tel" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-900" placeholder="Your mobile number" required>
-                    </div>
-                    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded transition">Send Enquiry</button>
-                </form>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-6 border-b border-gray-700 pb-2 inline-block">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-yellow-400 transition"><i class="fas fa-angle-right mr-2 text-yellow-500"></i>Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-400 transition"><i class="fas fa-angle-right mr-2 text-yellow-500"></i>About Us</a></li>
+                    <li><a href="#admission" class="hover:text-yellow-400 transition"><i class="fas fa-angle-right mr-2 text-yellow-500"></i>Admission Procedure</a></li>
+                    <li><a href="#gallery" class="hover:text-yellow-400 transition"><i class="fas fa-angle-right mr-2 text-yellow-500"></i>Photo Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-6 border-b border-gray-700 pb-2 inline-block">Get in Touch</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 text-yellow-500 w-6"></i>
+                        <span>Raishree Chauraha (Nahar Road),<br>Gauri Bazar, Deoria (U.P.)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mt-1 text-yellow-500 w-6"></i>
+                        <span>+91 95652 41505</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-mobile-alt mt-1 text-yellow-500 w-6"></i>
+                        <span>+91 73553 45644</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mt-1 text-yellow-500 w-6"></i>
+                        <span class="text-sm">stxaviersschool322@gmail.com</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Adarsh Public School. All Rights Reserved.</p>
-            <div class="mt-4 space-x-4 text-sm">
-                <a href="#" class="hover:text-white">Privacy Policy</a>
-                <a href="#" class="hover:text-white">Terms of Service</a>
-                <a href="#" class="hover:text-white">Sitemap</a>
-            </div>
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 pt-8 text-center text-sm">
+            <p>&copy; 2025 St. Xavier's School, Raishree Chauraha. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Simple Script for Interactions -->
+    <!-- Form Script (Simple interaction) -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        function handleForm(e) {
-            e.preventDefault();
-            // In a real site, this would send data to a server
-            // Using a custom UI element instead of alert for better UX
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = "Sent Successfully!";
-            btn.classList.remove('bg-yellow-500', 'hover:bg-yellow-600');
-            btn.classList.add('bg-green-500', 'hover:bg-green-600');
-            
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.add('bg-yellow-500', 'hover:bg-yellow-600');
-                btn.classList.remove('bg-green-500', 'hover:bg-green-600');
-                e.target.reset();
-            }, 3000);
-        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
